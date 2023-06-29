@@ -69,41 +69,41 @@ public class Dipendente {
 	public double stipendio(Livello liv) {
 		switch (liv) {
 		case OPERAIO:
-			stipendio = stipendioBase;
+			this.stipendio = stipendioBase;
 			break;
 
 		case IMPIEGATO:
-			stipendio = stipendioBase * 1.2;
+			this.stipendio = stipendioBase * 1.2;
 			break;
 
 		case QUADRO:
-			stipendio = stipendioBase * 1.5;
+			this.stipendio = stipendioBase * 1.5;
 			break;
 
 		case DIRIGENTE:
-			stipendio = stipendioBase * 2;
+			this.stipendio = stipendioBase * 2;
 
 		default:
 			System.out.println("livello non definito");
 		}
-		return stipendio;
+		return this.stipendio;
 	}
 
 	public void promuovi() {
 		switch (livello) {
 		case OPERAIO:
-			livello = Livello.IMPIEGATO;
-			stipendio = stipendioBase * 1.2;
+			this.livello = Livello.IMPIEGATO;
+			this.stipendio = stipendioBase * 1.2;
 			break;
 
 		case IMPIEGATO:
-			livello = Livello.QUADRO;
-			stipendio = stipendioBase * 1.5;
+			this.livello = Livello.QUADRO;
+			this.stipendio = stipendioBase * 1.5;
 			break;
 
 		case QUADRO:
-			livello = Livello.DIRIGENTE;
-			stipendio = stipendioBase * 2;
+			this.livello = Livello.DIRIGENTE;
+			this.stipendio = stipendioBase * 2;
 			break;
 
 		default:
