@@ -18,7 +18,7 @@ public class Dipendente {
 
 	public Dipendente(String matr, double ora, Livello liv, Dipartimento dip) {
 		this.matricola = matr;
-		this.stipendio = stipendio();
+		this.stipendio = stipendio(liv);
 		this.importoOrarioStraordinario = ora;
 		this.livello = liv;
 		this.dipartimento = dip;
@@ -66,7 +66,7 @@ public class Dipendente {
 
 	}
 
-	public void stipendio(Livello liv) {
+	public double stipendio(Livello liv) {
 		switch (liv) {
 		case OPERAIO:
 			stipendio = stipendioBase;
@@ -86,7 +86,7 @@ public class Dipendente {
 		default:
 			System.out.println("livello non definito");
 		}
-
+		return stipendio;
 	}
 
 	public void promuovi() {
@@ -112,14 +112,12 @@ public class Dipendente {
 
 	}
 
-	public void calcolaPaga(Dipendente dip) {
+	public static void calcolaPaga(Dipendente dip) {
 		System.out.println("Stipendio mensile: " + dip.getStipendio());
 	}
 
-	public void calcolaPaga(Dipendente dip, int ore) {
+	public static void calcolaPaga(Dipendente dip, int ore) {
 		double straordinario = dip.getStipendio() + (ore + dip.getImportoOrarioStraordinario());
 		System.out.println("Stipendio mensile: " + straordinario);
 	}
-	
-	public void 
 }
