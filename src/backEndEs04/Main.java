@@ -15,8 +15,9 @@ public class Main {
 		dipendente3.stampaDipendente();
 		dipendente4.stampaDipendente();
 
-		double stipendiTotali = Dipendente.calcolaPaga(dipendente1, 4) + Dipendente.calcolaPaga(dipendente2, 6)
-				+ Dipendente.calcolaPaga(dipendente3, 2) + Dipendente.calcolaPaga(dipendente4, 5);
+		double pagaTot = Dipendente.calcolaPaga(dipendente1, 5) + Dipendente.calcolaPaga(dipendente2, 5)
+				+ Dipendente.calcolaPaga(dipendente3, 5) + Dipendente.calcolaPaga(dipendente4, 5);
+		System.out.println("Il totatle degli stipendi è: " + pagaTot);
 	}
 
 }

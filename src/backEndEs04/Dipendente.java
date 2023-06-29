@@ -116,8 +116,8 @@ public class Dipendente {
 		System.out.println("Stipendio mensile: " + dip.getStipendio());
 	}
 
-	public static void calcolaPaga(Dipendente dip, int ore) {
+	public static double calcolaPaga(Dipendente dip, int ore) {
 		double straordinario = dip.getStipendio() + (ore + dip.getImportoOrarioStraordinario());
-		System.out.println("Stipendio mensile: " + straordinario);
+		return straordinario;
 	}
 }
